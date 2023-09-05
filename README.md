@@ -1,2 +1,2 @@
 # training
-Some personal trainings
+Some personal trainings : exercices I did, could be perfectly done or still in success.
