@@ -1,5 +1,10 @@
 #include "header.h"
 
+int	is_alpha(char c)
+{
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+}
+
 void	set_min(char *str)
 {
 	int	x;
@@ -22,7 +27,7 @@ void	altern_case(char *str)
 	set_min(str);
 	while (str[x])
 	{
-		if (x % 2 == 0)
+		if (x % 2 == 0 && is_alpha(str[x]))
 			str[x] -= 32;
 		x++;
 	}
