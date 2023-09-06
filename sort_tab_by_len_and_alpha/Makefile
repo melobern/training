@@ -6,13 +6,12 @@ ft_split.c \
 string.c \
 test_phrase.c \
 sort_functions.c
-HEADER = header.h
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) $(SRCS) $(HEADER) -o $@
+	$(CC) $(FLAGS) $(SRCS) header.h -o $@
 clean:
 	rm -f $(OBJS) *~
 fclean:
