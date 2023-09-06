@@ -1,42 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_phrase.c                                      :+:      :+:    :+:   */
+/*   string.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbernard <mbernard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 18:09:09 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/06 18:09:12 by mbernard         ###   ########.fr       */
+/*   Created: 2023/09/06 18:10:38 by mbernard          #+#    #+#             */
+/*   Updated: 2023/09/06 19:06:48 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void	split_sort_write(char *str)
+void	ft_putchar(char c)
 {
-	char	**tab;
-	int		x;
-
-	x = 0;
-	tab = ft_split(str, " 	");
-	sort_len_tab(tab);
-	sort_char_tab(tab);
-	while (tab[x])
-	{
-		ft_putstr(tab[x]);
-		free(tab[x]);
-		x++;
-		ft_putchar('\n');
-	}
-	free(tab);
+	write(1, &c, 1);
 }
 
-int	main(int ac, char **av)
+void	ft_putstr(char *str)
 {
-	if (ac == 2)
+	int	x;
+
+	x = 0;
+	while (str[x])
+		ft_putchar(str[x++]);
+}
+
+int	ft_strlen(char *str)
+{
+	int	len;
+
+	len = 0;
+	while (str[len])
+		len++;
+	return (len);
+}
+
+void	ft_strcpy(char *dest, char *src)
+{
+	int	x;
+
+	x = 0;
+	while (src[x])
 	{
-		split_sort_write(av[1]);
+		dest[x] = src[x];
+		x++;
 	}
-	else
-		ft_putchar('\n');
+	dest[x] = '\0';
+}
+
+void	ft_strcpy_two(char *dest, char *src, char *d2, char *s2)
+{
+	ft_strcpy(dest, src);
+	ft_strcpy(d2, s2);
 }

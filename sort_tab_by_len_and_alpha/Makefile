@@ -3,6 +3,7 @@ CC = cc
 FLAGS = -Wall -Werror -Wextra
 SRCS = basic_functions.c \
 ft_split.c \
+string.c \
 test_phrase.c \
 sort_functions.c
 HEADER = header.h

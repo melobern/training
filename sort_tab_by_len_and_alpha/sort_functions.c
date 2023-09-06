@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_functions.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbernard <mbernard@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/06 19:15:09 by mbernard          #+#    #+#             */
+/*   Updated: 2023/09/06 19:21:47 by mbernard         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "header.h"
 
 void	sort_char_tab(char **tab)
@@ -10,11 +22,11 @@ void	sort_char_tab(char **tab)
 	len_tab = 0;
 	while (tab[len_tab])
 		len_tab++;
-	count2 = 0;
-	while (count2 < len_tab - 1)
+	count2 = -1;
+	while (++count2 < len_tab - 1)
 	{
-		count = 0;
-		while (count < len_tab - 1)
+		count = -1;
+		while (++count < len_tab - 1)
 		{
 			if (ft_strlen(tab[count]) == ft_strlen(tab[count + 1]))
 			{
@@ -25,9 +37,7 @@ void	sort_char_tab(char **tab)
 					tab[count + 1] = tmp;
 				}
 			}
-			count++;
 		}
-		count2++;
 	}
 }
 
