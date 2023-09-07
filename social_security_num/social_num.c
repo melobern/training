@@ -6,15 +6,31 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 23:16:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 00:02:27 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/07 16:05:35 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
+int	calcul_nums(char *str)
+{
+	char	little_num[13];
+	long long	num;
+	int			key;
+
+	ft_strncpy(little_num, str, 13);
+	num = ft_atoi(little_num);
+	key = 97 - (num % 97);
+	return (key);
+}
 int	calcul_the_key(char *str)
 {
-	
+	long long	num;
+	int			key;
+
+	num = ft_atoi(num);
+	key = 97 - (num % 97);
+	return (key);
 }
 
 void	print_just_key(char *str)
@@ -42,7 +58,7 @@ int	main(int ac, char **av)
 					either too long. Please provide the right number if possible.");
 			else if (ft_strlen(av[1]) == 15)
 			{
-				calcul_keys(av[1]); // HERE IS THE FUNCTION
+					calcul_nums(av[1]); // HERE IS THE FUNCTION
 			}
 			else if (ft_strlen(av[1] > 15))
 				ft_putstr("Oups ! This number is way too long. Please provide a shorter number if possible.");
