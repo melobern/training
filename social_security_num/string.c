@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 22:57:09 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 16:09:10 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/07 16:55:25 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void	ft_strcpy(char *dest, char *src)
 	}
 	dest[x] = '\0';
 }
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+
+void	ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	count;
 
@@ -63,5 +64,4 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		dest[count] = '\0';
 		count++;
 	}
-	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 00:29:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 16:09:00 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/07 16:49:22 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	int_len(long long num)
 	return (len);
 }
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(long long nb)
 {
 	if (nb < 10)
 		ft_putchar(nb + '0');

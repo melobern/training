@@ -6,14 +6,17 @@
 #    By: mbernard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 23:14:40 by mbernard          #+#    #+#              #
-#    Updated: 2023/09/06 23:40:19 by mbernard         ###   ########.fr        #
+#    Updated: 2023/09/07 17:05:40 by mbernard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = social_nums
 CC = cc
 FLAGS = -Wall -Werror -Wextra
-SRCS = basic_functions.c \
+SRCS = social_num.c \
+ft_atoi.c \
+number.c \
+string.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -21,7 +24,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(FLAGS) $(SRCS) header.h -o $@
 clean:
-	rm -f $(OBJS) *~ .*
+	rm -f $(OBJS) *~
 fclean:
 	rm -f $(NAME)
 mrproper: clean fclean
