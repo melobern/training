@@ -6,7 +6,7 @@
 #    By: mbernard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 23:14:40 by mbernard          #+#    #+#              #
-#    Updated: 2023/09/07 17:05:40 by mbernard         ###   ########.fr        #
+#    Updated: 2023/09/07 19:50:58 by mbernard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ FLAGS = -Wall -Werror -Wextra
 SRCS = social_num.c \
 ft_atoi.c \
 number.c \
-string.c
+string.c \
+ft_cat_convert.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

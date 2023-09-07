@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 23:16:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 18:20:30 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/07 20:04:17 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,28 +56,31 @@ void	print_just_key(char *str)
 	ft_putnbr(key);
 }
 
-void	one_arg_num(char **av)
+void	one_arg_num(char *av)
 {
-	if (ft_strlen(av[1]) < 13)
+	if (ft_strlen(av) < 13)
 		ft_putstr("Oups ! This number is way too short !");
-	else if (ft_strlen(av[1]) == 13)
-		print_just_key(av[1]);
-	else if (ft_strlen(av[1]) == 14)
+	else if (ft_strlen(av) == 13)
+		print_just_key(av);
+	else if (ft_strlen(av) == 14)
 		ft_putstr("Oups ! Not enough or too many numbers !");
-	else if (ft_strlen(av[1]) == 15)
-		calcul_nums(av[1]);
-	else if (ft_strlen(av[1]) > 15)
+	else if (ft_strlen(av) == 15)
+		calcul_nums(av);
+	else if (ft_strlen(av) > 15)
 		ft_putstr("Oups ! This number is way too long !");
 }
 
 int	main(int ac, char **av)
 {
+	char	*dest;
+
 	if (ac == 2)
-		one_arg_num(av);
+		one_arg_num(av[1]);
 	else if (ac > 2 && ac < 14)
 	{
-		convert(ac, av);
-		one_arg_num[av[1]]
+		dest = convert(ac, av);
+		one_arg_num(dest);
+		free(dest);
 	}
 	ft_putchar('\n');
 	return (0);
