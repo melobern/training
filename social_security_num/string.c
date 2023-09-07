@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 22:57:09 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 00:01:24 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/07 16:09:10 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,20 @@ void	ft_strcpy(char *dest, char *src)
 	}
 	dest[x] = '\0';
 }
-
-void	ft_putnbr(int nb)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	if (nb < 10)
-		ft_putchar(nb + '0');
-	else if (nb >= 10)
+	unsigned int	count;
+
+	count = 0;
+	while (count < n && src[count])
 	{
-		ft_putnbr(nb / 10);
-		ft_putchar(nb % 10 + '0');
+		dest[count] = src[count];
+		count++;
 	}
+	while (count < n)
+	{
+		dest[count] = '\0';
+		count++;
+	}
+	return (dest);
 }

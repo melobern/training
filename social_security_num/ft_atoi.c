@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 18:06:27 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 00:28:58 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/07 15:59:19 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int	ft_is_num(char c)
 	return (c >= '0' && c <= '9');
 }
 
-long long int	ft_atoi(char *str)
+long long	ft_atoi(char *str)
 {
 	int	x;
-	long long int	nb;
+	long long	nb;
 
 	x = 0;
 	nb = 0;
