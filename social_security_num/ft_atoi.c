@@ -6,11 +6,11 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/14 18:06:27 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 15:59:19 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/07 17:07:17 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "header.h"
 
 int	ft_is_sign(char c)
 {
@@ -33,7 +33,7 @@ int	ft_is_num(char c)
 
 long long	ft_atoi(char *str)
 {
-	int	x;
+	int			x;
 	long long	nb;
 
 	x = 0;
@@ -55,10 +55,11 @@ long long	ft_atoi(char *str)
 		nb = nb * 10 + (str[x++] - '0');
 	return (nb);
 }
-
+/*
 char	*ft_itoa(long long num)
 {
 	char	*social_num;
 
 	social_num = malloc(sizeof(char) * (int_len(num) + 1));
 }
+*/
