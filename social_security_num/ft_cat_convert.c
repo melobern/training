@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 19:42:34 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/08 21:30:48 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/08 23:54:18 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,4 +53,13 @@ char	*convert(char **av)
 		y++;
 	}
 	return (dest);
+}
+
+void	print_lines(long long cop_num, long long key)
+{
+	ft_putnbr(cop_num);
+	ft_putchar(' ');
+	ft_putchar((key / 10) + '0');
+	ft_putchar((key % 10) + '0');
+	ft_putchar('\n');
 }
