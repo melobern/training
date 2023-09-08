@@ -6,7 +6,7 @@
 #    By: mbernard <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/06 23:14:40 by mbernard          #+#    #+#              #
-#    Updated: 2023/09/08 21:04:43 by mbernard         ###   ########.fr        #
+#    Updated: 2023/09/08 23:18:11 by mbernard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ ft_atoi.c \
 number.c \
 string.c \
 ft_cat_convert.c \
-ft_split.c
+ft_split.c \
+calculs.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

@@ -6,22 +6,24 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 23:16:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/08 21:31:14 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/08 23:14:14 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-long long	calcul_nums(char *str)
+void	calcul_nums(char *str)
 {
 	char		little_num[13];
 	//long long	num;
 	long long	key;
 
 	ft_strncpy(little_num, str, 13);
+	key = (str[13] - '0') * 10 + (str[14] - '0');
+	ft_municipality(little_num, key);
+	ft_birth_rate(little_num, key);
 	//num = ft_atoi(little_num);
-	key = atoi(str + 13);
-	return (key);
+	//key = atoi(str + 13);
 }
 
 long long	calcul_the_key(char *str)
