@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 23:16:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 20:04:17 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/08 21:31:14 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 long long	calcul_nums(char *str)
 {
 	char		little_num[13];
-	long long	num;
+	//long long	num;
 	long long	key;
 
 	ft_strncpy(little_num, str, 13);
-	num = ft_atoi(little_num);
-	key = 97 - (num % 97);
+	//num = ft_atoi(little_num);
+	key = atoi(str + 13);
 	return (key);
 }
 
@@ -74,11 +74,12 @@ int	main(int ac, char **av)
 {
 	char	*dest;
 
-	if (ac == 2)
-		one_arg_num(av[1]);
-	else if (ac > 2 && ac < 14)
+	if (ac > 1)
 	{
-		dest = convert(ac, av);
+		if (ac == 2)
+			dest = convert(ft_split(av[1], " 	"));
+		else if (ac > 2)
+			dest = convert(av + 1);
 		one_arg_num(dest);
 		free(dest);
 	}

@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 22:51:21 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 19:44:02 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/08 21:20:12 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void		ft_strcpy(char *dest, char *src);
 void		ft_strncpy(char *dest, char *src, unsigned int n);
 void		ft_strcat(char *dest, char *src);
 void		ft_putnbr(long long nb);
-char		*convert(int ac, char **av);
+char		*convert(char **av);
+char		**ft_split(char *str, char *charset);
 long long	ft_atoi(char *str);
 int			ft_strlen(char *str);
 int			int_len(long long num);

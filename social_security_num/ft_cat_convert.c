@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 19:42:34 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/07 20:00:26 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/08 21:30:48 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,16 @@ void	ft_strcat(char *dest, char *src)
 	dest[x] = '\0';
 }
 
-char	*convert(int ac, char **av)
+char	*convert(char **av)
 {
 	char	*dest;
 	int		x;
+	int		y;
 	int		len;
 
 	len = 0;
-	x = 1;
-	while (x < ac)
+	x = 0;
+	while (av[x])
 	{
 		len += ft_strlen(av[x]);
 		x++;
@@ -45,11 +46,11 @@ char	*convert(int ac, char **av)
 		free(dest);
 		return (NULL);
 	}
-	x = 1;
-	while (x < ac)
+	y = 0;
+	while (y < x)
 	{
-		ft_strcat(dest, av[x]);
-		x++;
+		ft_strcat(dest, av[y]);
+		y++;
 	}
 	return (dest);
 }
