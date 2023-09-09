@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 23:16:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/09 15:26:13 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/09 17:40:21 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ void	calcul_nums(char *str)
 	print_just_key(str);
 	ft_strncpy(little_num, str, 13);
 	key = (str[13] - '0') * 10 + (str[14] - '0');
+	ft_mun_birth(str, key);
 	ft_municipality(little_num, key);
 	ft_birth_rate(little_num, key);
 	ft_year(little_num, key);

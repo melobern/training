@@ -6,11 +6,39 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 19:42:34 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/09 16:58:52 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/09 17:45:20 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
+
+void	ft_swap(char *a, char *b)
+{
+	char	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+void	ft_mun_birth(char *str, long long key)
+{
+	char	copy[13];
+
+	ft_strncpy(copy, str, 13);
+	ft_swap(&copy[7], &copy[10]);
+	ft_swap(&copy[8], &copy[11]);
+	ft_swap(&copy[9], &copy[12]);
+	if (calcul_the_key(copy) == key)
+	{
+		ft_putstr("\nSWAP MUNICIPALITY AND BIRTH RATE !\n");
+		ft_putstr(copy);
+		ft_putchar(' ');
+		ft_putchar((key / 10) + '0');
+		ft_putchar((key % 10) + '0');
+		ft_putchar('\n');
+	}
+}
 
 void	ft_strcat(char *dest, char *src)
 {
