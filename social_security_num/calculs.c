@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/08 21:57:36 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/09 16:04:10 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/09 16:47:27 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_municipality(char *str, long long key)
 	long long	cop_num;
 	long long	key_two;
 
-	ft_strcpy(copy, str);
+	ft_strncpy(copy, str, 13);
 	copy[7] = '0';
 	copy[8] = '0';
 	copy[9] = '0';
@@ -42,7 +42,7 @@ void	ft_birth_rate(char *str, long long key)
 	long long	cop_num;
 	long long	key_two;
 
-	ft_strcpy(copy, str);
+	ft_strncpy(copy, str, 13);
 	copy[10] = '0';
 	copy[11] = '0';
 	copy[12] = '0';
@@ -65,7 +65,7 @@ void	ft_year(char *str, long long key)
 	long long	cop_num;
 	long long	key_two;
 
-	ft_strcpy(copy, str);
+	ft_strncpy(copy, str, 13);
 	copy[1] = '0';
 	copy[2] = '0';
 	cop_num = ft_atoi(copy);
@@ -87,7 +87,7 @@ void	ft_month(char *str, long long key)
 	long long	cop_num;
 	long long	key_two;
 
-	ft_strcpy(copy, str);
+	ft_strncpy(copy, str, 13);
 	copy[3] = '0';
 	copy[4] = '1';
 	cop_num = ft_atoi(copy);
@@ -109,7 +109,7 @@ void	ft_town(char *str, long long key)
 	long long	cop_num;
 	long long	key_two;
 
-	ft_strcpy(copy, str);
+	ft_strncpy(copy, str, 13);
 	copy[5] = '0';
 	copy[6] = '0';
 	cop_num = ft_atoi(copy);

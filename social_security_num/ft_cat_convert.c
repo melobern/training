@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 19:42:34 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/09 16:17:36 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/09 16:58:52 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@ void	ft_strcat(char *dest, char *src)
 
 char	*convert(char **av)
 {
-	char	*dest;
+	char	dest[30];
 	int		x;
 	int		y;
 	int		len;
 
+	ft_strncpy(dest, "", 1);
 	len = 0;
 	x = 0;
 	while (av[x])
@@ -40,19 +41,13 @@ char	*convert(char **av)
 		len += ft_strlen(av[x]);
 		x++;
 	}
-	dest = malloc(sizeof(char) * (len + 1));
-	if (!dest)
-	{
-		free(dest);
-		return (NULL);
-	}
 	y = 0;
 	while (y < x)
 	{
 		ft_strcat(dest, av[y]);
 		y++;
 	}
-	return (dest);
+	return (ft_strdup(dest));
 }
 
 void	print_lines(long long cop_num, long long key)
