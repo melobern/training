@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 19:42:34 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/08 23:54:18 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/09 16:17:36 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,25 @@ char	*convert(char **av)
 
 void	print_lines(long long cop_num, long long key)
 {
-	ft_putnbr(cop_num);
+	char	num[13];
+	int		x;
+
+	x = 12;
+	while (cop_num > 0)
+	{
+		num[x] = (cop_num % 10) + '0';
+		cop_num = cop_num / 10;
+		x--;
+	}
+	if (num[5] == '1' && (num[6] == '9' || num[6] == '8'))
+	{
+		num[5] = '2';
+		if (num[6] == '9')
+			num[6] = 'A';
+		else
+			num[6] = 'B';
+	}
+	ft_putstr(num);
 	ft_putchar(' ');
 	ft_putchar((key / 10) + '0');
 	ft_putchar((key % 10) + '0');
