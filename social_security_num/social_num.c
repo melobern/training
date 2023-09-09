@@ -6,7 +6,7 @@
 /*   By: mbernard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 23:16:14 by mbernard          #+#    #+#             */
-/*   Updated: 2023/09/09 00:19:36 by mbernard         ###   ########.fr       */
+/*   Updated: 2023/09/09 15:26:13 by mbernard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void	calcul_nums(char *str)
 	ft_birth_rate(little_num, key);
 	ft_year(little_num, key);
 	ft_month(little_num, key);
+	ft_town(little_num, key);
 	if (str[0] == '1')
 		little_num[0] = '2';
 	else
@@ -68,7 +69,7 @@ void	calcul_nums(char *str)
 		ft_putstr("\nGENDER SWAP\n");
 		ft_putstr(little_num);
 		ft_putchar(' ');
-		ft_putstr(key);
+		ft_putnbr(key);
 	}
 }
 
